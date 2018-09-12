@@ -50,5 +50,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     public static void main(String[] args) {
         System.out.println(new org.apache.tomcat.util.codec.binary.Base64().encodeAsString("my-client-1:12345678".getBytes()));
         System.out.println(java.util.Base64.getEncoder().encodeToString("my-client-1:12345678".getBytes()));
+
+        System.out.println(new org.apache.tomcat.util.codec.binary.Base64().decode("$2a$10$dYRcFip80f0jIKGzRGulFelK12036xWQKgajanfxT65QB4htsEXNK"));
     }
 }
