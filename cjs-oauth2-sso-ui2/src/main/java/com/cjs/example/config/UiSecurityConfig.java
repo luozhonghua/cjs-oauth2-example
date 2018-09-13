@@ -14,7 +14,7 @@ public class UiSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.antMatcher("/**")
-                .authorizeRequests()
+                .authorizeRequests() //请求授权，后面的需要授权
                 .antMatchers("/", "/login**").permitAll()
                 .anyRequest()
                 .authenticated();

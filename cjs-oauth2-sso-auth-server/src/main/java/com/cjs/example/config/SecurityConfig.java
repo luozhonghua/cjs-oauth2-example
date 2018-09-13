@@ -13,6 +13,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+
+/**
+ * 权限拥有者
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -22,11 +26,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http.authorizeRequests()   //请求授权，后面的需要授权
                 .antMatchers("/oauth/**","/login/**", "/logout").permitAll()
                 .anyRequest().authenticated()   // 其他地址的访问均需验证权限
                 .and()
-                .formLogin()
+                .formLogin()   //登录表单开放给所有人，默认的登录表单
                 .loginPage("/login")
                 .and()
                 .logout().logoutSuccessUrl("/");

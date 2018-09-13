@@ -1,4 +1,4 @@
-https://kefeng.wang/2018/04/06/oauth2-sso/
+﻿https://kefeng.wang/2018/04/06/oauth2-sso/
 
 
 https://www.jianshu.com/p/d94bb118aa43
@@ -35,3 +35,12 @@ http://localhost:9527/#/dashboard
 
 
 localhost:1004/user/info
+
+
+
+
+
+工程原理-参考
+https://blog.csdn.net/anLA_/article/details/80779640
+https://blog.csdn.net/seccloud/article/details/8192707
+https://kefeng.wang/2018/04/06/oauth2-sso/

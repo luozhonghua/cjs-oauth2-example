@@ -8,12 +8,12 @@ server:
 security:
   oauth2:
     client:
-      client-id: CouponSystem
-      client-secret: 12345
+      client-id: CouponSystem  #与服务端对应
+      client-secret: 12345    #与服务端对应
       access-token-uri: http://localhost:8080/oauth/token
       user-authorization-uri: http://localhost:8080/oauth/authorize
     resource:
-      user-info-uri: http://localhost:8080/user/me
+      user-info-uri: http://localhost:8080/user/me  #资源服务器，即对sso server的资源访问
 logging:
   level:
     root: info

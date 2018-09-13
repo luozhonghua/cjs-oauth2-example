@@ -10,6 +10,9 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
+/**
+ * 授权服务
+ */
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
