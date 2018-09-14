@@ -15,9 +15,9 @@ public class UiSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http.antMatcher("/**")
                 .authorizeRequests() //请求授权，后面的需要授权
-                .antMatchers("/", "/login**").permitAll()
+                .antMatchers("/", "/login**").permitAll()  //login无需权限验证
                 .anyRequest()
-                .authenticated();
+                .authenticated(); //其他所有路径都需要权限校验
     }
 
 }
